@@ -1,0 +1,14 @@
+table {
+  background-color: rgb(189, 189, 189);
+  width: 1000px;
+}
+
+th {
+  padding: 10px;
+  /* background-color: red; */
+}
+
+td {
+  text-align: center;
+  padding: 10px;
+}

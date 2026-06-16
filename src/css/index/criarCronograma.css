@@ -1,0 +1,28 @@
+.semana-e-horario {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.semana-e-horario p {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.semana-e-horario svg {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.semana-e-horario svg:hover {
+  color: red;
+}
+
+.input-time {
+  margin-right: 10px;
+}
+
+.form-botoes button {
+  margin-right: 10px;
+}

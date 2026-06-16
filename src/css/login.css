@@ -1,0 +1,26 @@
+.login-container {
+  margin-top: 15%;
+  text-align: center;
+}
+
+.login-container h1 {
+  margin-bottom: 10px;
+}
+
+.login-container input {
+  text-align: center;
+  width: 20vw;
+  margin-bottom: 10px;
+  height: 20px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 0px 3px black;
+}
+
+.login-container button {
+  width: 10vw;
+  height: 20px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 0px 3px black;
+}
