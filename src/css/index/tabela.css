@@ -1,14 +1,14 @@
-table {
+.tabela {
   background-color: rgb(189, 189, 189);
   width: 1000px;
 }
 
-th {
+.colunas th {
   padding: 10px;
   /* background-color: red; */
 }
 
-td {
+.linhas td {
   text-align: center;
   padding: 10px;
 }

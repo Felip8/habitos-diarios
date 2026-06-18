@@ -3,9 +3,9 @@ import "../../../css/index/tabela.css";
 export default function Tabela() {
   return (
     <div>
-      <table>
+      <table className="tabela">
         <thead>
-          <tr>
+          <tr className="colunas">
             <th>Horário</th>
             <th>Segunda</th>
             <th>Terça</th>
@@ -17,7 +17,7 @@ export default function Tabela() {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr className="linhas">
             <td>08:00 - 10:00</td>
             <td>Estudar inglês</td>
             <td>Tomar banho</td>

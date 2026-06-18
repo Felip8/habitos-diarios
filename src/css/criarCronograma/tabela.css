@@ -1,0 +1,47 @@
+.centraliza-botao-com-a-tabela{
+    background-color: rgb(197, 194, 194);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 1.2rem;
+     /*separa os input pra n deixar tudo grudado*/
+    text-align: center;
+}
+
+.tabela-criar-cronograma{
+border-spacing: 1rem;
+}
+
+.centraliza-botao-com-a-tabela input{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.centraliza-botao-com-a-tabela button{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px black;
+}
+
+
+.linha-inputs{
+    display: flex;
+    padding: 10px;
+}
+
+.linha-inputs p{
+    margin: 10px;
+}
+
+.tabela-footer{
+    text-align: center;
+}
+
+.botoes button{
+    margin-right: 10px;
+}
