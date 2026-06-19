@@ -12,3 +12,13 @@
   text-align: center;
   padding: 10px;
 }
+
+.button-criar-cronograma {
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  color: black;
+  border: none;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 10px;
+}

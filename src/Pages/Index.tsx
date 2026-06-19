@@ -10,7 +10,9 @@ export default function Index() {
 
   return (
     <div>
-      <button onClick={criarCronograma}>Criar cronograma</button>
+      <button onClick={criarCronograma} className="button-criar-cronograma">
+        Criar cronograma
+      </button>
       <Tabela />
     </div>
   );
