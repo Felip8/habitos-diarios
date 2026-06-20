@@ -8,8 +8,15 @@ export default function Index() {
     navigate("/criarCronograma");
   };
 
+  const voltar = () => {
+    navigate("/login");
+  };
+
   return (
     <div>
+      <button onClick={voltar} className="button-criar-cronograma">
+        Go back
+      </button>
       <button onClick={criarCronograma} className="button-criar-cronograma">
         Criar cronograma
       </button>
