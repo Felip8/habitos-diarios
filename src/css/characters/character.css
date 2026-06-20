@@ -1,0 +1,31 @@
+.characters-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.button-voltar {
+  align-self: flex-start;
+}
+
+.characters-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.character-card {
+  text-align: center;
+}
+
+.container-centraliza-p {
+  font-weight: bold;
+}
+
+.add-character button {
+  padding: 15px;
+  font-size: 20px;
+  margin-left: 50px;
+  cursor: pointer;
+}
