@@ -5,6 +5,7 @@ import Login from "./Pages/Login";
 import Index from "./Pages/Index";
 import "./css/global.css";
 import CriarCronograma from "./Pages/components/index/CriarCronograma";
+import Teste from "./Pages/Teste";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/index" element={<Index />} />
         <Route path="/login" element={<Login />} />
         <Route path="/criarCronograma" element={<CriarCronograma />} />
+        <Route path="/continuar" element={<Teste />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

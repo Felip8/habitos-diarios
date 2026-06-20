@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "../css/login.css";
+import Pig from "../assets/logo.png";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -16,7 +17,10 @@ export default function Login() {
       <div>
         <input type="text" placeholder="Senha" />
       </div>
-      <button onClick={entrar}>Entrar</button>
+      <div>
+        <button onClick={entrar}>Entrar</button>
+      </div>
+      <img src={Pig} alt="" className="pig" />
     </div>
   );
 }

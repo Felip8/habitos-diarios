@@ -1,12 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import "../../../css/criarCronograma/criarCronograma.css";
 import "../../../css/criarCronograma/tabela.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function CriarCronograma() {
   const navigate = useNavigate();
   const voltar = () => {
     navigate("/index");
+  };
+
+  const continuar = () => {
+    navigate("/continuar");
   };
 
   const linhaVazia = {
@@ -21,7 +25,14 @@ export default function CriarCronograma() {
     domingo: "",
   };
 
-  const [linhas, setLinhas] = useState([linhaVazia]);
+  const [linhas, setLinhas] = useState(() => {
+    const dadosSalvos = localStorage.getItem("cronograma_habitos");
+    return dadosSalvos ? JSON.parse(dadosSalvos) : [linhaVazia];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cronograma_habitos", JSON.stringify(linhas));
+  }, [linhas]);
 
   const adicionarLinha = (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,6 +59,9 @@ export default function CriarCronograma() {
       <button onClick={voltar} className="button-voltar">
         Voltar
       </button>
+      <button onClick={continuar} className="button-voltar">
+        Continuar
+      </button>
       <form className="centraliza-botao-com-a-tabela">
         <table className="tabela-criar-cronograma">
           <thead>
@@ -63,7 +77,7 @@ export default function CriarCronograma() {
             </tr>
           </thead>
           <tbody>
-            {linhas.map((linha, index) => (
+            {linhas.map((linha: LinhaCronograma, index: number) => (
               <tr key={index} className="linhas-criar-cronograma">
                 <td className="linha-inputs">
                   <input
