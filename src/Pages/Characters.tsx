@@ -2,7 +2,9 @@ import { useNavigate } from "react-router-dom";
 import "../css/characters/character.css";
 import Pig from "../assets/logo.png";
 import { useState } from "react";
-import "../css/characters/characterForm.css";
+import "../css/characters/characterForm.css"; //css do formulario
+import { listaDePersonagensPadrao } from "./interfaces/defaultCharacters";
+import Personagens from "./components/characters/Personagens";
 
 interface Personagem {
   id: number;
@@ -14,11 +16,12 @@ export default function Characters() {
   const navigate = useNavigate();
 
   const voltar = () => {
-    navigate("/criarCronograma");
+    navigate("/login");
   };
 
   //janela de criar o personagem
   const [modalAberto, setModalAberto] = useState<boolean>(false);
+  const [modalAbertoGaleria, setModalAbertoGaleria] = useState<boolean>(false);
 
   //campos para pegar nome a foto do usuário
   const [nomeInput, setNomeInput] = useState<string>("");
@@ -35,6 +38,11 @@ export default function Characters() {
 
   const salvarNovoPersonagem = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!nomeInput) {
+      alert("Não pode nome vazio");
+      return;
+    }
 
     const fotoFinal =
       fotoInput.trim() || "https://placehold.co/150?text=Sem+Foto";
@@ -92,8 +100,23 @@ export default function Characters() {
                     type="text"
                     value={fotoInput}
                     onChange={(e) => setFotoInput(e.target.value)}
-                    placeholder="Paste the link's image"
+                    placeholder="Paste the link's image here"
                   />
+                  <p>Ou</p>
+                  <button
+                    type="button"
+                    className="button-Galeria"
+                    onClick={() => setModalAbertoGaleria(true)}
+                  >
+                    Galeria
+                  </button>
+
+                  {modalAbertoGaleria && (
+                    <Personagens
+                      onFechar={() => setModalAbertoGaleria(false)}
+                      onSelecionarFoto={(url) => setFotoInput(url)}
+                    />
+                  )}
                 </div>
               </form>
               <div className="botoes-centralizados">

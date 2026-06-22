@@ -1,0 +1,33 @@
+/*arquivo da galeria de fotos dos personagens que ja estão no sistema*/
+.container-galeria {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-galeria {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card-galeria img {
+  margin: 0 10px 0;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card-galeria button {
+  margin-right: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px black;
+}
